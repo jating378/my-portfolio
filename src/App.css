@@ -1,38 +1,438 @@
+/* src/App.css */
+body {
+  background-color: #06122e; /* Dark gray background */
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; /* Use your preferred font-family */
+  color: #ffffff; /* Set text color to white */
+  height: 100vh; /* Make sure the body takes the full height of the viewport */
+}
+
+/* Add this to your App.css file */
+body.light-mode {
+  background-color: #FCF6F5;
+  color: #000000;
+  background-image:;
+}
+
+body.dark-mode {
+  background-color: #06122e;
+  color: #ffffff;
+}
+
+
+body.light-mode .container {
+  background-color: #990011;
+  border: 5px solid black;
+}
+
+body.light-mode .about-me-container {
+  background-color: #990011;
+  border: 5px solid black;
+}
+
+body.light-mode .education-container {
+  background-color: #990011;
+  border: 5px solid black;}
+
+body.light-mode .navigation-button {
+  background-color:#990011;
+}
+
+body.light-mode .mode-toggle{
+  background-color: #990011;
+}
+
+body.light-mode .navigation-button:hover {
+  background-color:#ca3244 /* Adjust the hover background color */
+}
 .App {
   text-align: center;
+  border-radius: 20px; /* Adjust the border-radius as needed */
+  overflow: hidden; /* Ensure content within the rounded border is visible */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-container {
+  position: absolute;
+  top: -30px;
+  left: 140px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo-text {
+  font-family: 'Protest Revolution', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  transition: transform 1s ease-in-out;
+}
+
+.logo-container:hover .logo-text {
+  transform: rotate(360deg);
+}
+
+.container {
+  background-color: #041a4d;
+  position: absolute;
+  top: 60%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  border: 5px solid white; /* Make the border 8px thick and adjust the color */
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.container:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.container-image {
+  position: absolute;
+  top: 23%;
+  right: 5%;
+  height: 50%; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+  opacity: 0.9; /* Adjust opacity as needed */
+  border-radius: 20px 0 0 20px; /* Adjust border-radius to match the container's border-radius */
+  object-fit: cover;
+}
+
+.protest-riot-text {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  font-family: 'Protest Riot', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem; /* Adjust the font size as needed */
+  color: #ffffff; /* Set the text color */
+}
+
+.protest-riot-subtext {
+  position: absolute;
+  top: 60%;
+  left: 14%;
+  font-family: 'Protest Riot', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem; /* Adjust the font size as needed */
+  color: #ffffff; /* Set the text color */
+}
+
+body.light-mode .skills-list :hover{
+  background-color:#ca3244;
+  padding: 5px;
+  border-radius: 10px;
+  border:#FCF6F5 solid 
+}
+
+
+
+@keyframes typing {
+  0%, 100% {
+    content: "";
+  }
+  50% {
+    content: "|";
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.typing-animation {
+  display: inline-block; /* Make it an inline-block element */
+}
+
+.typing-animation::after {
+  content: "";
+  display: inline-block;
+  width: 0; /* Set a fixed width to prevent the text from moving */
+  white-space: nowrap; /* Prevent line breaks */
+  animation: typing 1s infinite;
+}
+
+.navigation-container {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 15px;
+  
+}
+
+.navigation-button {
+  margin-left: 50px;
+  padding: 5px;
+  background-color: #09183b; /* Match your container background color */
+  border: none;
+  border-radius: 5px;
+  color: #ffffff; /* Set text color to white */
+  font-family: 'Teko', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem; /* Adjust the font size as needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-button:hover {
+  background-color: #0060e7; /* Adjust the hover background color */
+}
+
+/* src/App.css */
+/* ... existing styles ... */
+
+.about-me-container {
+  background-color: #041a4d;
+  position: absolute;
+  top: 180%; /* Adjust the top position as needed */
+  left: 49%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  border: 5px solid white;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.about-me-heading {
+  position:absolute;
+  top: 10%;
+  left: 40%;
+  font-family: 'Protest Revolution', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem; /* Adjust the font size as needed */
+  color: #ffffff; /* Set the text color */
+  margin: 0; /* Remove default margin */
+  margin-bottom: 20px; /* Add margin for spacing */
+  text-decoration:underline;
+  text-underline-offset: 5px; /* Adjust the gap between text and underline */
+}
+
+.about-me-content {
+  position: absolute;
+  top: 55%; /* Adjust the top position as needed */
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 60%;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 1000;
+  line-height: 1.7;
+  font-style: bold;
+  font-size: 0.8rem; /* Adjust the font size as needed */
+  color: #ffffff; /* Set the text color */
+  white-space: pre-line; /* Preserve line breaks */
+}
+
+.education-container {
+  background-color: #041a4d;
+  position: absolute;
+  top: 300%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  border: 5px solid white;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the start (left) */
+  align-items: flex-start; /* Align content to the start (left) */
+}
+
+.education-heading {
+  font-family: 'Protest Revolution', sans-serif;
+  font-weight: 400;
+  position:absolute;
+  top: 10%;
+  left: 40%;
+  font-style: normal;
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.education-content {
+  font-family: 'Roboto Mono', sans-serif;
+  position: absolute;
+  top: 30%;
+  margin-bottom: 10px;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #ffffff;
+  line-height: 1.7;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.education-content strong {
+  font-family: 'Protest Revolution',sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display:inline-block
+}
+
+
+.education-dates {
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
+  margin-left: 400px; /* Add a margin between strong heading and dates */
+}
+
+/* Add this to your App.css file */
+.scroll-to-top {
+  font-family: Protest Revolution , sans-serif;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+
+.mode-toggle {
+  background-color: #06122e;
+  margin-top: 10px;
+  position: absolute;
+  top: 8px;
+  left: 100%;
+  cursor: pointer;
+  font-size: 20px;
   color: white;
+  padding: 10px;
+  width: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.animate-left-to-right {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease-out forwards;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes fadeInLeft {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+.skills-container {
+  background-color: #041a4d;
+  position: absolute;
+  top: 430%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  border: 5px solid white;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the start (left) */
+  align-items: flex-start; /* Align content to the start (left) */
+}
+
+.skills-heading {
+  font-family: 'Protest Revolution', sans-serif;
+  font-weight: 400;
+  position:absolute;
+  top: 10%;
+  left: 43%;
+  font-style: normal;
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-underline-offset: 9px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-list {
+  color: #ffffff;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  list-style-type: none;
+  padding: 0;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.skills-list li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.skills-list li:hover {
+  background-color: rgb(67, 84, 240);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-icon {
+  margin-right: 10px;
+  font-size: 25px;
+  color: #fcfcfc; /* Set your desired color */
+}
+
+.skills-note {
+  position: absolute;
+  top: 90%;
+  left: 14%;
+  font-style: italic;
+  margin-top: 20px;
+  color: #ffffff; /* Set your desired color */
+}
+
+.skills-heading {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.skills-heading:hover {
+  color: #61dafb; /* Set your desired hover color */
+}
+
+.skills-list strong {
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.skills-list li {
+  margin-bottom: 15px; /* Adjust this value to increase or decrease space */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
