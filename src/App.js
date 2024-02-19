@@ -63,8 +63,8 @@ function App() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
- 
 
+  
 
 
   return (
@@ -88,6 +88,14 @@ function App() {
         </p>
       <p className='logo-text protest-riot-subtext'>Current CS Student</p>
         <img src={darkMode ? containerImage : lightcontainerImage} alt="Container Image" className="container-image" />
+        <a
+        href={process.env.PUBLIC_URL + "/myresume.pdf"}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="resume-button"
+      >
+        See My Resume !
+      </a>
       </div>
       <div className='about-me-container container' id="about-section">
         <h2 className='logo-text protest-riot-text about-me-heading'>

@@ -170,13 +170,21 @@ body.light-mode .skills-list :hover{
   padding: 5px;
   background-color: #09183b; /* Match your container background color */
   border: 3px solid white;
-  border-radius: 5px;
+  border-radius: 15px;
+  width: 100px;
   color: #ffffff; /* Set text color to white */
   font-family: 'Teko', sans-serif;
   font-weight: 400;
   font-size: 1.4rem; /* Adjust the font size as needed */
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+body.light-mode .navigation-button{
+  border: 3px solid black;
+}
+
+body.light-mode .scroll-to-top{
+  border: 3px solid black;
 }
 
 .navigation-button:hover {
@@ -435,4 +443,28 @@ body.light-mode .skills-list :hover{
   margin-bottom: 15px; /* Adjust this value to increase or decrease space */
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+}
+
+.resume-button {
+  /* Add your styles here */
+  background-color:#041a4d;
+  position: fixed;
+  top:85%;
+  left:75%;
+  color: white;
+  border-radius:10px;
+  border:3px solid white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+body.light-mode .resume-button{
+  background-color: #990011;
+}
+
+body.light-mode .resume-button:hover{
+  background-color:#ca3244;
+}
+.resume-button:hover {
+  background-color:#0060e7;
 }
