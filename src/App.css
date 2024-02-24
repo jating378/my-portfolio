@@ -458,6 +458,19 @@ body.light-mode .scroll-to-top{
   cursor: pointer;
 }
 
+.linkedin-button {
+  /* Add your styles here */
+  background-color:#041a4d;
+  position: fixed;
+  top:85%;
+  left:65%;
+  color: white;
+  border-radius:10px;
+  border:3px solid white;
+  padding: 10px;
+  cursor: pointer;
+}
+
 body.light-mode .resume-button{
   background-color: #990011;
 }
@@ -466,5 +479,33 @@ body.light-mode .resume-button:hover{
   background-color:#ca3244;
 }
 .resume-button:hover {
+  background-color:#0060e7;
+}
+
+
+
+
+.linkedin-button {
+  /* Add your styles here */
+  background-color:#041a4d;
+  position: fixed;
+  top:85%;
+  left:65%;
+  color: white;
+  border-radius:10px;
+  border:3px solid white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+body.light-mode .linkedin-button{
+  background-color: #990011;
+}
+
+body.light-mode .linkedin-button:hover{
+  background-color:#ca3244;
+}
+.linkedin-button:hover {
   background-color:#0060e7;
 }

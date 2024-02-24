@@ -96,6 +96,15 @@ function App() {
       >
         See My Resume !
       </a>
+      <a
+        href="https://www.linkedin.com/in/jating378/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="linkedin-button"
+      >
+        See My LinkedIn Profile!
+      </a>
+
       </div>
       <div className='about-me-container container' id="about-section">
         <h2 className='logo-text protest-riot-text about-me-heading'>
@@ -182,8 +191,8 @@ function App() {
           </li>
         </ul>
         <p className="skills-note">
-          Actively exploring and gaining proficiency in MERN Stack and Flask for
-          modern and efficient web development.
+          Actively exploring and gaining proficiency in 
+          modern technologies for innovative and efficient web development.
         </p>
 </div>
 <button className="scroll-to-top" onClick={scrollToTop}>
